@@ -1,8 +1,5 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
-theme: just-the-docs
-
-url: https://just-the-docs.github.io
-
+title: GoStack Framework
+description: A batteries-included full-stack web framework for Go
+url: https://charledeon77.github.io/gostack-docs
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
