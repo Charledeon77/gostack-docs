@@ -56,8 +56,10 @@ It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Pyt
 
 **Go** developers have never had this — until now (June 2026).
 
-# The Five Core Pillars
-1. 🔋 Batteries Included, Not Bundled GoStack ships with routing, middleware, migrations, query building, view rendering, client reactivity, and a CLI — all in one module. You don't choose your stack. The stack is chosen for you, and everything integrates natively.
+# The Five (5) Core Pillars
+## 1. ) 🔋 Batteries Included:
+
+**GoStack** ships with everything — routing, ORM, migrations, auth, caching, queues, WebSockets, scheduling, storage, events, admin dashboard, and a frontend compiler — all in one module, which means no abandonware risk, no integration hell, no context switching between Go and Node.js, no tracking ten different package versions, and no JavaScript frontend forced upon you, because everything is natively integrated, maintained as one coherent ecosystem, and compiled into a single binary, so you don't assemble a stack — you just build.
 
 2. 🔒 Compile-Time Over Runtime Every decision in GoStack favors catching errors at compile time rather than at runtime:
 
