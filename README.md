@@ -19,7 +19,7 @@
   <b>GoStack</b> — <i>A modern fullstack web framework for scalable web development in Go.</i>
 </p>
 
-# 🧠 The Philosophy & Vision of GoStack  
+# 📝 The Philosophy & Vision of GoStack  
 ## The Problem GoStack Solves  
 
 Modern **Web development** in **Go** is fragmented by design. A typical Go Web project looks like:
@@ -78,11 +78,11 @@ It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Pyt
 **Go** developers have never had this — until now (June 2026).
 
 # The Five (5) Core Pillars
-## 1. ) 🔋 Batteries Included:
+## 1.) 🔋 Batteries Included:
 
 **GoStack** ships with everything — routing, ORM, migrations, auth, caching, queues, WebSockets, scheduling, storage, events, admin dashboard, and a frontend compiler — all in one module, which means no abandonware risk, no integration hell, no context switching between Go and Node.js, no tracking ten different package versions, and no JavaScript frontend forced upon you, because everything is natively integrated, maintained as one coherent ecosystem, and compiled into a single binary, so you don't assemble a stack — you just build.
 
-## 2. 🧠 No Context Switching (Go-Native Fullstack)
+## 2.) 🔄 No Context Switching (Go-Native Fullstack)
 
 The most radical part of GoStack: the frontend is Go. Components are `.html`, `.css`, and `.js` files that **Tempose** compiles into Go string literals at build time — no separate dev server, no proxy configuration, no CORS headaches.
 
@@ -90,12 +90,21 @@ The most radical part of GoStack: the frontend is Go. Components are `.html`, `.
 
 The result is a fullstack application with no Node.js, no `npm`, no `package.json`, no `node_modules`, no Webpack, no Vite, no Babel — just `go build`. One language. One binary. No separate frontend toolchain.
 
+## 3.) 📘 Easy to Learn and Use (One Mental Model)
+
+When you learn a new framework, you're not just learning syntax — you're learning a way of thinking. Most frameworks teach you ten different ways of thinking: one for data, one for background tasks, one for real-time updates, one for configuration. Every new feature demands a new mental context switch.
+
+GoStack doesn't do this — everything in GoStack works the way you'd naturally expect it to work. The pattern you learn on day one is the same pattern you use every time forward. There are no hidden layers where the framework suddenly behaves differently because you've crossed some invisible complexity threshold.
+
+With GoStack, there's just one simple pattern that never changes, no matter how big your idea gets.
+
 2. 🔒 Compile-Time Over Runtime Every decision in GoStack favors catching errors at compile time rather than at runtime:
 
 Schemas are Go code (not YAML or SQL files) — caught by the compiler
 Components are compiled ahead-of-time into gostack_components_gen.go — no disk I/O in production
 The CLI runs inside the project's own module context — so migrations are always version-aligned
-The driver registry uses typed DriverFunc constructors — not interface{} config maps
+The driver registry uses typed DriverFunc constructors — not interface{} config maps.  
+
 3. 🏗️ Inversion of Control Without Reflection The DI Container uses a factory registration approach — no struct tags, no reflect.Type scanning. This keeps dependency resolution fast and keeps the compiler's type checker in control. The two-phase boot (Register → Boot) prevents the most common DI bug: resolving a service before it's been registered.
 
 4. 🌐 Go-Native Fullstack (No Separate Frontend) The most radical part of GoStack: the frontend is Go. Components are .html/.css/.js files that get compiled into Go string literals at build time. Client-side reactivity is provided by the gs-* directive system (a micro Alpine.js embedded in the binary). The result is a fullstack app with no Node.js, no npm, no package.json — just go build.
