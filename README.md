@@ -1,6 +1,6 @@
 <!-- Logo -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Charledeon77/gostack-docs/main/assets/images/gostack-logo-transparent.png" alt="Project Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/Charledeon77/gostack-docs/main/assets/images/gostack-3d-logo.png" alt="GoStack Logo" />
 </p>
 
 <!-- Badges -->
