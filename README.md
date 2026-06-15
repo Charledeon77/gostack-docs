@@ -118,15 +118,15 @@ GoStack doesn't wait for you to make a mistake — it prevents the mistake from 
 
 For years, developers in other ecosystems have enjoyed something Go never had: a complete, integrated framework where every piece works with every other piece out of the box. Rails has it. Django has it. Laravel has it.
 
-Go developers have built amazing things too : but not because of the tooling, but despite it -- A router here. An ORM there. a queue library over here. A WebSocket package somewhere else. Ten different ecosystems. Ten different futures. Ten chances for any one of them to fall out of sync with your needs.
+Go developers have built amazing things too — but not because of the tooling. Despite it. Go developers have built amazing things too — but not because of the tooling. Despite it. Go developers have always had to build integration themselves, piece by piece, and then maintain it forever. A router here. An ORM there. A queue library over here. A WebSocket package somewhere else. Ten different ecosystems. Ten different futures. Ten chances for any one of them to fall out of sync with your needs.
 
 GoStack delivers what Go has always deserved: a complete, integrated framework designed from the ground up to be **Future-Proof by Default**. No hunting for which router works with which ORM. No wondering if your WebSocket library will still be maintained next year. No constant context switching between packages with different philosophies.
 
-One stack. One way of working. One future.
+The result is simple: one stack, one way of working, one future. No assembly required. No fragmentation. No guesswork.
 
-Other ecosystems have enjoyed this foundation for years. GoStack brings it to Go.
+Other ecosystems have enjoyed this foundation for years. GoStack brings it to the Go ecosystem, to finally remove those headaches and uncertainties.
 
-GoStack handles the heavy lifting and the behind-the-scenes complexity. You handle your ambition and concentrate on your core business objectives.
+GoStack handles the heavy lifting and the behind-the-scenes complexity. While you handle your ambition and concentrate on your core business objectives.
 
 # The Core Rationale in One Sentence
 GoStack exists because Go is an exceptional language held back by ecosystem fragmentation — and the cure is a single, opinionated, compile-safe framework that lets you build the server, the database layer, and the UI without ever leaving Go.
