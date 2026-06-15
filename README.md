@@ -48,6 +48,7 @@ Modern **Web development** in **Go** is fragmented by design. A typical Go Web p
 
 **The GoStack Answer**: One Language. One Binary. One Mental Model.
 
+#
 # The Disruptive Paradigm Shift: GOSTACK
 
 **GoStack** is the first complete end-to-end framework solution for building **FullStack Web applications** in Go. It handles the:
@@ -82,14 +83,18 @@ It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Pyt
 
 **GoStack** ships with everything — routing, ORM, migrations, auth, caching, queues, WebSockets, scheduling, storage, events, admin dashboard, and a frontend compiler — all in one module, which means no abandonware risk, no integration hell, no context switching between Go and Node.js, no tracking ten different package versions, and no JavaScript frontend forced upon you, because everything is natively integrated, maintained as one coherent ecosystem, and compiled into a single binary, so you don't assemble a stack — you just build.
 
+#
 ## 2.) 🔄 No Context Switching (Go-Native Fullstack)
 
 The most radical part of GoStack: the frontend is Go. Components are `.html`, `.css`, and `.js` files that **Tempose** compiles into Go string literals at build time — no separate dev server, no proxy configuration, no CORS headaches.
 
 **Client-side reactivity** is provided by **Glide**, a micro frontend engine inspired by Alpine.js, embedded directly in your binary. With Glide's `gs-*` directive system, you add interactivity using declarative attributes right in your HTML — `gs-click`, `gs-model`, `gs-show`, `gs-for`, and more. No `useState`, no `useEffect`, no virtual DOM, no build step. Just HTML with superpowers.
 
-The result is a fullstack application with no Node.js, no `npm`, no `package.json`, no `node_modules`, no Webpack, no Vite, no Babel — just `go build`. One language. One binary. No separate frontend toolchain.
+The result is a fullstack application with no Node.js, no `npm`, no `package.json`, no `node_modules`, no Webpack, no Vite, no Babel — just `go build`.   
 
+**One language. One binary. No separate frontend toolchain**.
+
+#
 ## 3.) 📘 Easy to Learn and Use (One Mental Model)
 
 When you learn a new framework, you're not just learning syntax — you're learning a way of thinking. Most frameworks teach you ten different ways of thinking: one for data, one for background tasks, one for real-time updates, one for configuration. Every new feature demands a new mental context switch.
@@ -98,16 +103,16 @@ GoStack doesn't do this — everything in GoStack works the way you'd naturally 
 
 With GoStack, there's just one simple pattern that never changes, no matter how big your idea gets.
 
-2. 🔒 Compile-Time Over Runtime Every decision in GoStack favors catching errors at compile time rather than at runtime:
+#
+## 4.) 🔒 Secure by Default
 
-Schemas are Go code (not YAML or SQL files) — caught by the compiler
-Components are compiled ahead-of-time into gostack_components_gen.go — no disk I/O in production
-The CLI runs inside the project's own module context — so migrations are always version-aligned
-The driver registry uses typed DriverFunc constructors — not interface{} config maps.  
+Most frameworks assume you'll remember to lock the door after you build the house. GoStack assumes you won't — so it locks every door for you, before you even lay the first brick.
 
-3. 🏗️ Inversion of Control Without Reflection The DI Container uses a factory registration approach — no struct tags, no reflect.Type scanning. This keeps dependency resolution fast and keeps the compiler's type checker in control. The two-phase boot (Register → Boot) prevents the most common DI bug: resolving a service before it's been registered.
+With GoStack, security isn't an afterthought you scramble to add at the end of a project. It's baked into the foundation from the very first line. Every request is questioned. Every file access is contained. Every database query is protected unless you explicitly say otherwise. Every user action needs permission. Nothing is trusted by accident.
 
-4. 🌐 Go-Native Fullstack (No Separate Frontend) The most radical part of GoStack: the frontend is Go. Components are .html/.css/.js files that get compiled into Go string literals at build time. Client-side reactivity is provided by the gs-* directive system (a micro Alpine.js embedded in the binary). The result is a fullstack app with no Node.js, no npm, no package.json — just go build.
+This means you can build with speed and sleep with peace of mind. Beginners don't have to become security experts just to launch their first app. Investors don't have to worry about the hidden cost of a breach. And developers don't have to spend their nights wondering if they forgot to sanitize that one input.
+
+GoStack doesn't wait for you to make a mistake — it prevents the mistake from ever happening. Security isn't a feature you add later. It's how the framework works, baked in and always on.
 
 5. 🧩 Modular Self-Containment Each framework package is strictly ordered and independently testable. The contract/ interfaces (Database, Tx) mean you can swap MySQL for Postgres via an environment variable, with zero code changes. The driver registry ensures drivers are never compiled in unless explicitly imported.
 
