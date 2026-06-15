@@ -1,3 +1,24 @@
+<!-- Logo -->
+<p align="center">
+  <img src="https://your-image-url-here.png" alt="Project Logo" width="200"/>
+</p>
+
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/CI-passing-brightgreen"/>
+  <img src="https://img.shields.io/badge/codecov-81%25-yellow"/>
+  <img src="https://img.shields.io/badge/Go-1.26-blue"/>
+  <img src="https://img.shields.io/badge/Echo-v4-lightgrey"/>
+  <img src="https://img.shields.io/badge/SolidJS-1.8-blueviolet"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.3-09f"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-16-blue"/>
+  <img src="https://img.shields.io/badge/License-MIT-green"/>
+</p>
+
+<p align="center">
+  <b>GoStack</b> — <i>A modern fullstack web framework for scalable web development in Go.</i>
+</p>
+
 # 🧠 The Philosophy & Vision of GoStack  
 ## The Problem GoStack Solves  
 
