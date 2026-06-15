@@ -82,6 +82,14 @@ It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Pyt
 
 **GoStack** ships with everything — routing, ORM, migrations, auth, caching, queues, WebSockets, scheduling, storage, events, admin dashboard, and a frontend compiler — all in one module, which means no abandonware risk, no integration hell, no context switching between Go and Node.js, no tracking ten different package versions, and no JavaScript frontend forced upon you, because everything is natively integrated, maintained as one coherent ecosystem, and compiled into a single binary, so you don't assemble a stack — you just build.
 
+## 2. 🧠 No Context Switching (Go-Native Fullstack)
+
+The most radical part of GoStack: the frontend is Go. Components are `.html`, `.css`, and `.js` files that **Tempose** compiles into Go string literals at build time — no separate dev server, no proxy configuration, no CORS headaches.
+
+**Client-side reactivity** is provided by **Glide**, a micro frontend engine inspired by Alpine.js, embedded directly in your binary. With Glide's `gs-*` directive system, you add interactivity using declarative attributes right in your HTML — `gs-click`, `gs-model`, `gs-show`, `gs-for`, and more. No `useState`, no `useEffect`, no virtual DOM, no build step. Just HTML with superpowers.
+
+The result is a fullstack application with no Node.js, no `npm`, no `package.json`, no `node_modules`, no Webpack, no Vite, no Babel — just `go build`. One language. One binary. No separate frontend toolchain.
+
 2. 🔒 Compile-Time Over Runtime Every decision in GoStack favors catching errors at compile time rather than at runtime:
 
 Schemas are Go code (not YAML or SQL files) — caught by the compiler
