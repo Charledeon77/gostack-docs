@@ -5,3 +5,4 @@ url: https://charledeon77.github.io/gostack-docs
 aux_links:
 GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
 logo: "/assets/images/gostack-logo-transparent.png"
+logo_max_width: "200px"
