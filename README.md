@@ -3,35 +3,54 @@
 
 Modern **Web development** in **Go** is fragmented by design. A typical Go Web project looks like:
 
-1. ) **Router** from a third-party library *(<a href="https://github.com/gorilla/mux" target="_blank"><code>gorilla/mux</code></a>)*
+1. ) **Router** from a third-party library *(<a href="https://github.com/gorilla/mux" target="_blank" rel="noopener noreferrer"><code>gorilla/mux</code></a>)*
 
-2. ) **ORM** from a third-party library *(<a href="https://github.com/go-gorm/gorm" target="_blank"><code>gorm</code></a>)*
+2. ) **ORM** from a third-party library *(<a href="https://github.com/go-gorm/gorm" target="_blank" rel="noopener noreferrer"><code>gorm</code></a>)*
 
-3. ) **Migration** tool from a third-party library *(<a href="https://github.com/golang-migrate/migrate" target="_blank"><code>golang-migrate</code></a>)*
+3. ) **Migration** tool from a third-party library *(<a href="https://github.com/golang-migrate/migrate" target="_blank" rel="noopener noreferrer"><code>golang-migrate</code></a>)*
 
-4. ) **Authentication** system from a third-party library *(<a href="https://github.com/markbates/goth" target="_blank"><code>goth</code></a>)*
+4. ) **Authentication** system from a third-party library *(<a href="https://github.com/markbates/goth" target="_blank" rel="noopener noreferrer"><code>goth</code></a>)*
 
-5. ) **Caching** layer from a third-party library *(<a href="https://github.com/redis/go-redis" target="_blank"><code>go-redis</code></a>)*
+5. ) **Caching** layer from a third-party library *(<a href="https://github.com/redis/go-redis" target="_blank" rel="noopener noreferrer"><code>go-redis</code></a>)*
 
-6. ) **Queue**/background worker from a third-party library *(<a href="https://github.com/RichardKnox/machinery" target="_blank"><code>machinery</code></a>)*
+6. ) **Queue**/background worker from a third-party library *(<a href="https://github.com/RichardKnox/machinery" target="_blank" rel="noopener noreferrer"><code>machinery</code></a>)*
 
-7. ) **WebSocket** library from a third-party library *(<a href="https://github.com/gorilla/websocket" target="_blank"><code>gorilla/websocket</code></a>)*
+7. ) **WebSocket** library from a third-party library *(<a href="https://github.com/gorilla/websocket" target="_blank" rel="noopener noreferrer"><code>gorilla/websocket</code></a>)*
 
-8. ) **Cron** scheduler from a third-party library *(<a href="https://github.com/robfig/cron" target="_blank"><code>robfig/cron</code></a>)*
+8. ) **Cron** scheduler from a third-party library *(<a href="https://github.com/robfig/cron" target="_blank" rel="noopener noreferrer"><code>robfig/cron</code></a>)*
 
-9. ) **File storage** abstraction from a third-party library *(<a href="https://github.com/aws/aws-sdk-go" target="_blank"><code>aws-sdk-go</code></a>)*
+9. ) **File storage** abstraction from a third-party library *(<a href="https://github.com/aws/aws-sdk-go" target="_blank" rel="noopener noreferrer"><code>aws-sdk-go</code></a>)*
 
 10. ) **Frontend** built entirely separately *(React)* in a different language, introducing context-switching, with its own third-party ecosystem *(Vite)*
 
-**The result: ten third-party ecosystems, ten mental models, ten failure points — just to build one application.**
+**The result**: Ten third-party ecosystems, Ten mental models, Ten failure points — just to build one application.
 
+**The GoStack Answer**: One Language. One Binary. One Mental Model.
 
-Ready for you to test. Let me know how it looks.<strong>The result: ten third-party ecosystems, ten mental models, ten failure points — just to build one application.</strong>
+**GoStack** is the first complete end-to-end framework solution for building **FullStack Web applications** in Go. It handles the:
 
-The GoStack Answer: One Language. One Binary. One Mental Model.
-"The complete end-to-end solution for building web applications in Go. It handles the server, the database, the frontend, and the glue that connects them — all within the Go ecosystem."
+1. ) ✅ **Server** *(Citadel)* — IoC service container and unified bootstrapping kernel
+2. ) ✅ **Middleware** *(Navigator)* — pipeline-aware routing engine with onion-style middleware
+3. ) ✅ **ORM** *(Crafter)* — compile-time safe Active Record ORM with model hooks and hydration
+4. ) ✅ **Schema Builder** *(Grapher)* — declarative fluent schema builder for database definitions
+5. ) ✅ **Migrations** *(Traveller)* — auto-schema diffing migration runner with transaction support
+6. ) ✅ **Authentication** *(Guard)* — session/token auth with CSRF and policy-based RBAC
+7. ) ✅ **Caching** *(Mory)* — strongly-typed generic caching adapter
+8. ) ✅ **Queue** *(Sequence)* — background worker with retries, delays, job chains, and batches
+9. ) ✅ **Events** *(Spark)* — sync and async Pub/Sub event dispatcher
+10. ) ✅ **Mail** *(GoMail)* — rich SMTP HTML mailer built on the standard library
+11. ) ✅ **Storage** *(Vault)* — traversal-secure local and S3 storage sandbox
+12. ) ✅ **Scheduler** *(Planner)* — native cron-style task scheduler running in background
+13. ) ✅ **Admin Dashboard** *(GoDash)* — auto-generated admin panel with live queue monitoring
+14. ) ✅ **Frontend Compiler** *(Tempose)* — AOT compiler turning HTML/CSS/JS into Go code
+15. ) ✅ **Client Reactivity** *(Glide)* — zero-dependency reactive directive engine
+16. ) ✅ **CLI** *(Gost)* — interactive scaffolding for migrations, models, and controllers
+17. ) ✅ **Config** *(GoCon)* — environment-based configuration management.
+18. ) ✅ **Everything** else in-between, and the glue that connects them — all within the **Go** ecosystem.
 
-GoStack is philosophically the Laravel of Go. The rationale borrows directly from what made Laravel dominant in PHP: instead of assembling an app from 10 independent packages, you get one coherent framework where every layer knows about every other layer by design.
+Everything in **One binary, One mental model, One language**. It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Python**, and what **Rails** gave **Ruby** -- instead of assembling an app from 10 independent packages, you get one coherent framework where every layer knows about every other layer by design..
+
+**Go** developers have never had this — until now (June 2026).
 
 The Five Core Pillars
 1. 🔋 Batteries Included, Not Bundled GoStack ships with routing, middleware, migrations, query building, view rendering, client reactivity, and a CLI — all in one module. You don't choose your stack. The stack is chosen for you, and everything integrates natively.
