@@ -3,5 +3,5 @@ description: A batteries-included full-stack web framework for Go
 theme: just-the-docs
 url: https://charledeon77.github.io/gostack-docs
 aux_links:
-  GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
-logo: "/assets/images/gostack-logo-transparent.png"
+GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
+logo: "assets/images/gostack-logo-transparent.png"
