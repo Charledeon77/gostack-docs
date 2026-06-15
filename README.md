@@ -3,31 +3,31 @@
 
 Modern **Web development** in **Go** is fragmented by design. A typical Go Web project looks like:
 
-1. ) **Router** from a third-party library *(<a href="https://github.com/gorilla/mux" target="_blank" rel="noopener noreferrer"><code>gorilla/mux</code></a>)*
+1. ) **Router** from a third-party library (*<code>gorilla/mux</code>*)
 
-2. ) **ORM** from a third-party library *(<a href="https://github.com/go-gorm/gorm" target="_blank" rel="noopener noreferrer"><code>gorm</code></a>)*
+2. ) **ORM** from a third-party library (*<code>gorm</code>*)
 
-3. ) **Migration** tool from a third-party library *(<a href="https://github.com/golang-migrate/migrate" target="_blank" rel="noopener noreferrer"><code>golang-migrate</code></a>)*
+3. ) **Migration** tool from a third-party library (*<code>golang-migrate</code>*)
 
-4. ) **Authentication** system from a third-party library *(<a href="https://github.com/markbates/goth" target="_blank" rel="noopener noreferrer"><code>goth</code></a>)*
+4. ) **Authentication** system from a third-party library (*<code>goth</code>*)
 
-5. ) **Caching** layer from a third-party library *(<a href="https://github.com/redis/go-redis" target="_blank" rel="noopener noreferrer"><code>go-redis</code></a>)*
+5. ) **Caching** layer from a third-party library (*<code>go-redis</code>*)
 
-6. ) **Queue**/background worker from a third-party library *(<a href="https://github.com/RichardKnox/machinery" target="_blank" rel="noopener noreferrer"><code>machinery</code></a>)*
+6. ) **Queue**/background worker from a third-party library (*<code>machinery</code>*)
 
-7. ) **WebSocket** library from a third-party library *(<a href="https://github.com/gorilla/websocket" target="_blank" rel="noopener noreferrer"><code>gorilla/websocket</code></a>)*
+7. ) **WebSocket** library from a third-party library (*<code>gorilla/websocket</code>*)
 
-8. ) **Cron** scheduler from a third-party library *(<a href="https://github.com/robfig/cron" target="_blank" rel="noopener noreferrer"><code>robfig/cron</code></a>)*
+8. ) **Cron** scheduler from a third-party library (*<code>robfig/cron</code>*)
 
-9. ) **File storage** abstraction from a third-party library *(<a href="https://github.com/aws/aws-sdk-go" target="_blank" rel="noopener noreferrer"><code>aws-sdk-go</code></a>)*
+9. ) **File storage** abstraction from a third-party library (*<code>aws-sdk-go</code>*)
 
-10. ) **Frontend** built entirely separately *(React)* in a different language, introducing context-switching, with its own third-party ecosystem *(Vite)*
+10. ) **Frontend** built entirely separately (*<code>React</code>*) in a different language, introducing context-switching, with its own third-party ecosystem (*<code>Vite</code>*)
 
 **The result**: Ten third-party ecosystems, Ten mental models, Ten failure points — just to build one application.
 
 **The GoStack Answer**: One Language. One Binary. One Mental Model.
 
-# The Diruptive Paradigm Shift: GOSTACK
+# The Disruptive Paradigm Shift: GOSTACK
 
 **GoStack** is the first complete end-to-end framework solution for building **FullStack Web applications** in Go. It handles the:
 
@@ -52,10 +52,9 @@ Modern **Web development** in **Go** is fragmented by design. A typical Go Web p
 
 Everything in **One binary, One mental model, One language**.   
 
-It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Python**, and what **Rails** gave **Ruby** -- instead of assembling an app from 10 independent packages, you get one coherent framework where every layer knows about every other layer by design.
+It's the equivalent of what **Laravel** gave **PHP**, what **Django** gave **Python**, and what **Rails** gave **Ruby** — instead of assembling an app from 10 independent packages, you get one coherent framework where every layer knows about every other layer by design.
 
 **Go** developers have never had this — until now (June 2026).
-#
 
 # The Five Core Pillars
 1. 🔋 Batteries Included, Not Bundled GoStack ships with routing, middleware, migrations, query building, view rendering, client reactivity, and a CLI — all in one module. You don't choose your stack. The stack is chosen for you, and everything integrates natively.
