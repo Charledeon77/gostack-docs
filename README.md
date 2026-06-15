@@ -114,9 +114,21 @@ This means you can build with speed and sleep with peace of mind. Beginners don'
 
 GoStack doesn't wait for you to make a mistake — it prevents the mistake from ever happening. Security isn't a feature you add later. It's how the framework works, baked in and always on.
 
-5. 🧩 Modular Self-Containment Each framework package is strictly ordered and independently testable. The contract/ interfaces (Database, Tx) mean you can swap MySQL for Postgres via an environment variable, with zero code changes. The driver registry ensures drivers are never compiled in unless explicitly imported.
+## 5. ⚡ Developer Experience as a First-Class Feature
 
-The Core Rationale in One Sentence
+For years, developers in other ecosystems have enjoyed something Go never had: a complete, integrated framework where every piece works with every other piece out of the box. Rails has it. Django has it. Laravel has it.
+
+Go developers have built amazing things too : but not because of the tooling, but despite it -- A router here. An ORM there. a queue library over here. A WebSocket package somewhere else. Ten different ecosystems. Ten different futures. Ten chances for any one of them to fall out of sync with your needs.
+
+GoStack delivers what Go has always deserved: a complete, integrated framework designed from the ground up to be **Future-Proof by Default**. No hunting for which router works with which ORM. No wondering if your WebSocket library will still be maintained next year. No constant context switching between packages with different philosophies.
+
+One stack. One way of working. One future.
+
+Other ecosystems have enjoyed this foundation for years. GoStack brings it to Go.
+
+GoStack handles the heavy lifting and the behind-the-scenes complexity. You handle your ambition and concentrate on your core business objectives.
+
+# The Core Rationale in One Sentence
 GoStack exists because Go is an exceptional language held back by ecosystem fragmentation — and the cure is a single, opinionated, compile-safe framework that lets you build the server, the database layer, and the UI without ever leaving Go.
 
 It's positioned as the answer to: "Why would I use Laravel/Rails/Django if I want Go's performance?" The answer GoStack gives is: "You wouldn't have to choose anymore."
