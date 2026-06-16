@@ -1,6 +1,8 @@
 ---
 title: Getting Started
 layout: default
+parent: Home
+nav_order: 2
 ---
 
 # Getting Started
