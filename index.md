@@ -5,7 +5,7 @@ layout: home
 
 <!-- Logo -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Charledeon77/gostack-docs/main/assets/images/gostack-logo-transparent.png" alt="GoStack Logo" style="width:100%">
+  <img src="https://raw.githubusercontent.com/Charledeon77/gostack-docs/main/assets/images/gostack-2d-logo-rectangular.jpg" alt="GoStack Logo" style="width:100%">
 </p>
 
 <!-- Badges -->
