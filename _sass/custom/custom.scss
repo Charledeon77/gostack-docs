@@ -1,3 +1,9 @@
 .site-logo {
   max-width: 250px !important;
 }
+
+@media (max-width: 800px) {
+  .side-bar .site-footer {
+    display: none !important;
+  }
+}
