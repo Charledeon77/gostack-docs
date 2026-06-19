@@ -5,14 +5,16 @@
 
 <!-- Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/CI-passing-brightgreen"/>
-  <img src="https://img.shields.io/badge/codecov-81%25-yellow"/>
-  <img src="https://img.shields.io/badge/Go-1.26-blue"/>
-  <img src="https://img.shields.io/badge/Echo-v4-lightgrey"/>
-  <img src="https://img.shields.io/badge/SolidJS-1.8-blueviolet"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.3-09f"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-16-blue"/>
-  <img src="https://img.shields.io/badge/License-MIT-green"/>
+  <img src="https://img.shields.io/badge/License-Apache%202.0-orange?logo=apache" />
+  <img src="https://img.shields.io/badge/version-1.0.0-1FB249?logo=github" />
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?logo=githubactions" />
+  <img src="https://img.shields.io/badge/tests-passing-brightgreen?logo=githubactions" />
+  <img src="https://img.shields.io/badge/coverage-80%25-yellowgreen?logo=codecov" />
+  <img src="https://img.shields.io/badge/Go%20Report-A%2B-8a2be2?logo=goreportcard" />
+  <img src="https://img.shields.io/badge/docs-available-blue?logo=readthedocs" />
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?logo=googlecast&logoColor=F4842D" />
+  <a href="https://pkg.go.dev/github.com/Charledeon77/gostack"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go" alt="Go Reference" /></a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?logo=github" />
 </p>
 
 <p align="center">
