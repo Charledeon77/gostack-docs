@@ -9,6 +9,18 @@ nav_order: 2
 
 In this section, you will install the GoStack framework, the essential foundation for building and scaling robust applications. By following this guide, you will set up both the environment and the CLI tools required to streamline your development workflow.
 
+## PRE-REQUISITES
+
+Before installing **GoStack**, you must have the **Go** *Programming Language* installed on your machine. GoStack relies on the Go toolchain to manage dependencies, compile your application, and execute framework commands.
+
+- **Download Go**: Visit the official Go website (https://go.dev/dl/) to download the installer for your operating system.
+- **Install**: Follow the instructions provided for your specific platform (Windows, macOS, or Linux).
+- **Verify**: After installation, open your terminal or command prompt and run the following command to ensure Go is correctly configured:
+
+go version
+
+Once you see the installed Go version in your terminal, you are ready to proceed with the GoStack CLI installation.
+
 ## The GoStack CLI (Gost)
 Gost serves as the foundational command-line interface for the GoStack framework, acting as the primary engine for scaffolding project structures, managing database migrations, and automating routine code generation tasks. By centralizing these core development workflows, Gost enables developers to rapidly initialize consistent, production-ready environments, ensuring that all necessary dependencies and configuration files are correctly provisioned from the very first command.
 
