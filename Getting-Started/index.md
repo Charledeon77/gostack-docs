@@ -17,12 +17,9 @@ Before installing **GoStack**, you must have the **Go** *Programming Language* i
 - **Install**: Follow the instructions provided for your specific platform (Windows, macOS, or Linux).
 - **Verify**: After installation, open your terminal or command prompt and run the following command to ensure Go is correctly configured:
 
-In this setup:
-* The first **```bash** tells GitHub "Start a code box, and treat this as bash code."
-* **go version** is the command itself.
-* The second **```** tells GitHub "Stop the code box here."bash
-go version ```
-
+```bash
+go version
+```
 Once you see the installed Go version in your terminal, you are ready to proceed with the GoStack CLI installation.
 
 ## The GoStack CLI (Gost)
