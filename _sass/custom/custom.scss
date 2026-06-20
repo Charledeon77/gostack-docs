@@ -7,3 +7,15 @@
     display: none !important;
   }
 }
+
+.nav-list {
+  padding-left: 0 !important;
+}
+
+.nav-list .nav-list-item {
+  padding-left: 0 !important;
+}
+
+.nav-list .nav-list-link {
+  padding-left: 1rem !important;
+}
