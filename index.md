@@ -140,3 +140,17 @@ GoStack handles the heavy lifting and the behind-the-scenes complexity. While yo
 GoStack exists because Go is an exceptional language held back by ecosystem fragmentation — and the cure is a single, opinionated, compile-safe framework that lets you build the server, the database layer, and the UI without ever leaving Go.
 
 It's positioned as the answer to: "Why would I use Laravel/Rails/Django if I want Go's performance?" The answer GoStack gives is: "You wouldn't have to choose anymore."
+
+
+#
+#Who is GoStack for?
+GoStack is for Go developers who want to build web applications without assembling a stack from ten different libraries. It is for developers who want one system where everything works together out of the box.
+
+It is also for beginners who are new to Go and want a framework that guides them toward good practices without forcing them to become experts in every subsystem before they can build something useful.
+
+#
+#What GoStack is not
+GoStack is not a microframework. It is not designed for building tiny APIs with minimal overhead. If you need a small, lightweight HTTP server with no additional features, Go’s standard library or a microframework may be a better choice.
+
+GoStack is a fullstack framework. It is designed for building complete Web applications with databases, authentication, background jobs, frontend components, and everything in-between that your web application needs.
+
