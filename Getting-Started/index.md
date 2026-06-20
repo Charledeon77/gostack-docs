@@ -1,6 +1,6 @@
 ---
-title: What is GoStack?
-parent: Getting Started
+title: Getting Started
+has_children: true
 nav_order: 1
 ---
 
