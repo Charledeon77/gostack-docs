@@ -1,1 +1,5 @@
-Advanced/index.md
+---
+title: Advanced
+has_children: true
+nav_order: 2
+---
