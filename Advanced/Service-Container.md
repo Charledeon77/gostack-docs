@@ -71,9 +71,3 @@ func (p *DatabaseProvider) Boot(c *foundation.Container) {
 ```
 
 The `Register` phase binds services. The `Boot` phase runs after all services are registered, so you can safely resolve other services.
-
----
-
-
-The next page covers Middleware (Bridge).
-```
