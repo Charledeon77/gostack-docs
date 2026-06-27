@@ -1,10 +1,9 @@
 title: GoStack Framework
 description: A batteries-included full-stack web framework for Go
 theme: just-the-docs
+color_scheme: custom
 aux_links:
-GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
+  GoStack on GitHub: https://github.com/Charledeon77/gostack-docs
 logo: "/assets/images/gostack-logo-transparent.png"
 just_the_docs:
-nav_enabled: true
-
-
+  nav_enabled: true
