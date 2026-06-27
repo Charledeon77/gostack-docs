@@ -5,9 +5,12 @@ layout: default
 nav_order: 2
 ---
 
+Welcome to the **GoStack ecosystem!**  
+Since you already know **Go** basics, **GoStack** will feel familiar, but with all the scaffolding, database configuration, routing, and frontend compiler layers pre-assembled for you.  
+
 # INSTALLATION
 
-# Getting Started with GoStack
+## Getting Started with GoStack
 
 GoStack is a full-stack Web framework for Go. It is **Batteries-included** *FullStack Web framework* -- meaning, everything you need to build a complete Web application from routing, database access, authentication, queuing, caching, mail, file storage, and more — is all *built-in* and ready to use the moment you scaffold a new project.
 
@@ -56,7 +59,7 @@ Run the following command, replacing `myapp` with whatever you want to name your
 gost new myapp
 ```
 
-This launches the **interactive project wizard**. The wizard asks you a few simple questions to configure your project. For each question, you can press **Enter** to accept the recommended default.
+This launches the **Interactive Project Wizard**. The wizard asks you a few simple questions to configure your project. For each question, you can press **Enter** to accept the recommended default.
 
 ### Wizard Walkthrough
 
