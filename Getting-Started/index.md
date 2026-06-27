@@ -37,9 +37,9 @@ GoStack ships with a global command-line tool called **`gost`**. You install it 
 Open your terminal and run:
 
 ```bash
-go install [github.com/Charledeon77/gostack/cmd/gost@latest](https://github.com/Charledeon77/gostack/cmd/gost@latest)
-
+go install github.com/Charledeon77/gostack/cmd/gost@latest
 ```
+
 
 Go will download, compile, and install the `gost` binary on your machine automatically. This may take a minute the first time.
 
