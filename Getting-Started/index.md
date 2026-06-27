@@ -176,7 +176,7 @@ This creates a new file at `internal/controller/welcome_controller.go`. Open tha
 ```go
 package controller
 
-import "[github.com/Charledeon77/gostack/framework/http](https://github.com/Charledeon77/gostack/framework/http)"
+import "github.com/Charledeon77/gostack/framework/http"
 
 type WelcomeController struct{}
 
