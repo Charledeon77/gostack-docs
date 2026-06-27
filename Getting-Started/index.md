@@ -65,7 +65,7 @@ This launches the **Interactive Project Wizard**. The wizard asks you a few simp
 
 **Question 1 — Database Engine**
 ```
-? Select your database engine:
+❯ Select your database engine:
   1) Relational SQL (MySQL, PostgreSQL, CockroachDB, SQLite)
   2) MongoDB (NoSQL Document Store)
   3) Neo4j (Graph Database)
@@ -79,7 +79,7 @@ Press **Enter** to select Relational SQL. This is the most common choice for web
 
 **Question 2 — SQL Dialect**
 ```
-? Select your SQL dialect:
+❯ Select your SQL dialect:
   1) MySQL
   2) PostgreSQL
   3) CockroachDB
@@ -95,7 +95,7 @@ Press **Enter** to select SQLite. SQLite stores your entire database in a single
 
 **Question 3 — Guard Authentication**
 ```
-? Would you like to scaffold Guard Authentication? (y/N):
+❯ Would you like to scaffold Guard Authentication? (y/N):
 ```
 Type **`y`** and press Enter if you want GoStack to automatically generate a complete user authentication system (registration, login, logout, password hashing, and session management). Type **`N`** or press Enter to skip it and add it manually later.
 
