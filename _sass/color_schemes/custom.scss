@@ -2,5 +2,7 @@
 ---
 
 $body-text-color: #1E262E !default;
-$font-size: 22px !default;
-$font-size-sm: 18px !default;
+$link-color: #1E262E !default;
+
+// Override the light scheme's body text color
+$color-scheme-body-text-color: #1E262E !default;
