@@ -303,8 +303,7 @@ This occasionally happens after a fresh Go installation. Try the following steps
 **Step 2 — If it still does not work**, it means your Go installation was not set up completely on your machine. Visit [go.dev/doc/install](https://go.dev/doc/install) and follow the "Test your installation" instructions for your operating system to fix your Go setup. Once Go is working correctly, run the install command again:
 
 ```bash
-go install [github.com/Charledeon77/gostack/cmd/gost@latest](https://github.com/Charledeon77/gostack/cmd/gost@latest)
-
+go install github.com/Charledeon77/gostack/cmd/gost@latest
 ```
 
 ---
