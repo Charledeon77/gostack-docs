@@ -9,7 +9,7 @@ nav_order: 2
 
 Since you already know **Go** basics, **GoStack** will feel familiar, but with all the scaffolding, database configuration, routing, and frontend compiler layers pre-assembled for you.  
 
-# INSTALLATION
+## INSTALLATION
 
 ## Getting Started with GoStack
 
