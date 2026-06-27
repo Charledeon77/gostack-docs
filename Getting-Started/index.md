@@ -7,78 +7,287 @@ nav_order: 2
 
 # INSTALLATION
 
-In this section, you will install the GoStack framework, the essential foundation for building and scaling robust applications. By following this guide, you will set up both the environment and the CLI tools required to streamline your development workflow.
+# Getting Started with GoStack
 
-## PRE-REQUISITES
+GoStack is a full-stack Web framework for Go. It is **Batteries-included** *FullStack Web framework* -- meaning, everything you need to build a complete Web application from routing, database access, authentication, queuing, caching, mail, file storage, and more — is all *built-in* and ready to use the moment you scaffold a new project.
 
-Before installing **GoStack**, you must have the **Go** *Programming Language* installed on your machine. GoStack relies on the Go toolchain to manage dependencies, compile your application, and execute framework commands.
-
-- **Download Go**: Visit the official Go website (https://go.dev/dl/) to download the installer for your operating system.
-- **Install**: Follow the instructions provided for your specific platform (Windows, macOS, or Linux).
-- **Verify**: After installation, open your terminal or command prompt and run the following command to ensure Go is correctly configured:
-
-```bash
-go version
-```
-Once you see the installed Go version in your terminal, you are ready to proceed with the GoStack CLI installation.
-
-## The GoStack CLI (Gost)
-Gost serves as the foundational command-line interface for the GoStack framework, acting as the primary engine for scaffolding project structures, managing database migrations, and automating routine code generation tasks. By centralizing these core development workflows, Gost enables developers to rapidly initialize consistent, production-ready environments, ensuring that all necessary dependencies and configuration files are correctly provisioned from the very first command.
-
-## Installation by Platform
-
-Ensure you have Go installed on your system before proceeding. Select your operating system to view the specific installation steps:
-
-- [Windows](#1-installing-gostack-on-windows)
-- [Linux](#2-installing-gostack-on-linux)
-- [MacOS](#3-installing-gostack-on-macos)
-
-### 1. Installing GoStack on: Windows
-1. Ensure Go is installed and added to your system PATH.
-2. Open PowerShell or Command Prompt.
-3. Run the following command to install the Gost CLI globally:
-   go install github.com/Charledeon77/gostack/cmd/gost@latest
-
-### 2. Installing GoStack on: Linux
-1. Ensure Go is installed and your GOPATH is configured.
-2. Open your terminal.
-3. Run the following command to install the Gost CLI globally:
-   go install github.com/Charledeon77/gostack/cmd/gost@latest
-
-### 3. Installing GoStack on: MacOS
-1. Ensure Go is installed (via Homebrew or the official installer).
-2. Open your terminal.
-3. Run the following command to install the Gost CLI globally:
-   go install github.com/Charledeon77/gostack/cmd/gost@latest
+If you have just finished learning Go and want to build a real application, this guide walks you through every step from installation to your first working webpage.
 
 ---
 
-## POST-INSTALLATION SETUP
+## Prerequisites
 
-Once the installation is complete, these universal steps will finalize your configuration and prepare you to begin development:
+You only need one thing installed before you can use GoStack:
 
-1. Verify Installation:
-   gost --version
-   (Confirm the version number is displayed to ensure the CLI is accessible.)
+**Go (Version 1.22 or newer)**
+Download and run the installer from [go.dev/download](https://go.dev/download). The installer configures everything automatically for your operating system.
 
-2. Create Your First Project:
-   gost new myapp
-   (This generates a 'myapp' directory with a complete GoStack project structure.)
+That is it. You do not need Git, Docker, or any database server to get started.
 
-3. Initialize:
-   cd myapp
-   (Navigate into your new project directory.)
+---
 
-4. Review Environment Defaults:
-   Check the generated '.env' file, which includes your automatically generated 'APP_KEY' and default application settings.
+## Step 1 — Install the GoStack CLI
 
-5. Launch the Development Server:
-   go run cmd/gostack/main.go
-   (Your application will start and be accessible locally at http://localhost:8080.)
+GoStack ships with a global command-line tool called **`gost`**. You install it once on your machine and use it everywhere.
 
-## What you get
-The 'gost new' command provides a production-ready starting point including:
-- A modular project structure.
-- A functional main.go file.
-- An auto-configured .env file.
-- A pre-initialized go.mod file with all required dependencies.
+Open your terminal and run:
+
+```bash
+go install github.com/Charledeon77/gostack/cmd/gost@latest
+```
+
+Go will download, compile, and install the `gost` binary on your machine automatically. This may take a minute the first time.
+
+Once it finishes, verify the installation worked:
+
+```bash
+gost
+```
+
+You should see the GoStack command list printed to your terminal. If your terminal says `gost: command not found`, see the [Troubleshooting](#troubleshooting) section at the bottom of this page.
+
+---
+
+## Step 2 — Create a New Project
+
+Run the following command, replacing `myapp` with whatever you want to name your project:
+
+```bash
+gost new myapp
+```
+
+This launches the **interactive project wizard**. The wizard asks you a few simple questions to configure your project. For each question, you can press **Enter** to accept the recommended default.
+
+### Wizard Walkthrough
+
+**Question 1 — Database Engine**
+```
+? Select your database engine:
+  1) Relational SQL (MySQL, PostgreSQL, CockroachDB, SQLite)
+  2) MongoDB (NoSQL Document Store)
+  3) Neo4j (Graph Database)
+  4) Cassandra (Wide-Column NoSQL)
+
+  Enter selection (1-4, default: 1):
+```
+Press **Enter** to select Relational SQL. This is the most common choice for web applications.
+
+---
+
+**Question 2 — SQL Dialect**
+```
+? Select your SQL dialect:
+  1) MySQL
+  2) PostgreSQL
+  3) CockroachDB
+  4) SQLite
+
+  Enter selection (1-4, default: 4):
+```
+Press **Enter** to select SQLite. SQLite stores your entire database in a single local file inside your project folder. It requires no installation, no server, and no configuration. It is the right choice for local development.
+
+> When you are ready to move your application to production, you simply change two lines in your `.env` file to point to MySQL or PostgreSQL. You do not need to rewrite any of your application code.
+
+---
+
+**Question 3 — Guard Authentication**
+```
+? Would you like to scaffold Guard Authentication? (y/N):
+```
+Type **`y`** and press Enter if you want GoStack to automatically generate a complete user authentication system (registration, login, logout, password hashing, and session management). Type **`N`** or press Enter to skip it and add it manually later.
+
+---
+
+### What Happens Behind the Scenes
+
+After you answer the wizard questions, GoStack automatically:
+
+1. Downloads the project template from GitHub directly over HTTPS (no Git required)
+2. Generates a secure 32-character `APP_KEY` and writes it to your `.env` file
+3. Configures your chosen database connection in `.env`
+4. Sets up your Go module with your project name
+5. Runs `go mod tidy` to download all dependencies
+6. Initializes a fresh local Git repository (if Git is installed)
+7. Prints a detailed summary of everything that was configured
+
+---
+
+## Step 3 — Start Your Application
+
+Move into your new project folder:
+
+```bash
+cd myapp
+```
+
+Start the local development server:
+
+```bash
+gost serve
+```
+
+You will see GoStack print its startup log, including the port it is listening on. Open your browser and navigate to:
+
+```
+http://localhost:8080
+```
+
+Your GoStack application is live.
+
+---
+
+## Step 4 — Build Your First Webpage
+
+Every webpage in a GoStack application is built from two parts:
+
+- A **Controller** — a Go file containing the logic that runs when someone visits a URL
+- A **Route** — a line of code that maps a URL path to a controller method
+
+### Create a Controller
+
+Use the `gost` CLI to generate a new controller:
+
+```bash
+gost make:controller WelcomeController
+```
+
+This creates a new file at `internal/controller/welcome_controller.go`. Open that file in your editor. You will see an empty controller struct with a placeholder method. Replace the contents with the following:
+
+```go
+package controller
+
+import "github.com/Charledeon77/gostack/framework/http"
+
+type WelcomeController struct{}
+
+func NewWelcomeController() *WelcomeController {
+    return &WelcomeController{}
+}
+
+// Show handles GET requests to /welcome
+func (c *WelcomeController) Show(ctx *http.Context) error {
+    return ctx.HTML(http.StatusOK, `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>My GoStack App</title>
+        </head>
+        <body>
+            <h1>Hello! This is my first GoStack page.</h1>
+            <p>Built with GoStack — the full-stack Go framework.</p>
+        </body>
+        </html>
+    `)
+}
+```
+
+### Register the Route
+
+Open `cmd/app/main.go`. This is the entry point of your application. Scroll down until you find the routing registration block (around Step 5 and Step 6 in the file comments). Add your new controller:
+
+```go
+// Step 5 — Instantiate Controllers
+welcomeCtrl := controller.NewWelcomeController()
+
+// Step 6 — Register Routes
+router.Get("/welcome", welcomeCtrl.Show)
+```
+
+### Visit Your New Page
+
+Make sure `gost serve` is still running (restart it if needed), then open:
+
+```
+http://localhost:8080/welcome
+```
+
+Your first GoStack webpage is live.
+
+---
+
+## Step 5 — Run Your Database Migrations
+
+If you chose a SQL database and scaffolded Guard Authentication, GoStack has prepared the database migration files for the users and sessions tables. Apply them now:
+
+```bash
+gost migrate
+```
+
+GoStack will connect to your SQLite database file, create all the necessary tables, and confirm each migration. Your application is now ready to register and authenticate real users.
+
+---
+
+## Summary of All `gost` Commands
+
+Once inside your project directory, you have access to the full GoStack CLI:
+
+| Command | What It Does |
+|---|---|
+| `gost serve` | Start the local development web server |
+| `gost migrate` | Run all pending database migrations |
+| `gost rollback` | Roll back the last database migration |
+| `gost make:model <Name>` | Generate a new database model |
+| `gost make:controller <Name>` | Generate a new controller |
+| `gost make:migration <Name>` | Generate a new migration schema file |
+| `gost ui:preview` | Launch the interactive UI component gallery |
+
+---
+
+## Switching to a Production Database
+
+When you are ready to move your application from local development to production, switching databases requires no code changes whatsoever.
+
+Open the `.env` file in your project root and update these two values:
+
+**For PostgreSQL:**
+```env
+DB_DRIVER=postgres
+DB_DSN=postgres://username:password@127.0.0.1:5432/myapp_db?sslmode=disable
+```
+
+**For MySQL:**
+```env
+DB_DRIVER=mysql
+DB_DSN=username:password@tcp(127.0.0.1:3306)/myapp_db
+```
+
+**For CockroachDB:**
+```env
+DB_DRIVER=cockroach
+DB_DSN=postgres://username:password@127.0.0.1:26257/myapp_db?sslmode=disable
+```
+
+Restart the server with `gost serve` and GoStack will connect to your new database automatically.
+
+---
+
+## Troubleshooting
+
+### `gost: command not found`
+
+This occasionally happens after a fresh Go installation. Try the following steps in order:
+
+**Step 1 — Close your terminal completely and open a brand new one.**
+This is the fix for most people. Your terminal needs to be restarted to recognise newly installed tools. Once you have reopened it, run `gost` again.
+
+**Step 2 — If it still does not work**, it means your Go installation was not set up completely on your machine. Visit [go.dev/doc/install](https://go.dev/doc/install) and follow the "Test your installation" instructions for your operating system to fix your Go setup. Once Go is working correctly, run the install command again:
+```bash
+go install github.com/Charledeon77/gostack/cmd/gost@latest
+```
+
+---
+
+### `failed to download project template`
+
+This means `gost new` could not reach GitHub. Check that your internet connection is active and try again.
+
+---
+
+### Port 8080 is already in use
+
+Another application on your machine is using port 8080. You can change GoStack's port by editing the `.env` file in your project root:
+```env
+APP_PORT=9000
+```
+Then restart the server with `gost serve`.
