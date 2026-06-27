@@ -5,7 +5,8 @@ layout: default
 nav_order: 2
 ---
 
-Welcome to the **GoStack ecosystem!**  
+# Welcome to the **GoStack ecosystem!**  
+
 Since you already know **Go** basics, **GoStack** will feel familiar, but with all the scaffolding, database configuration, routing, and frontend compiler layers pre-assembled for you.  
 
 # INSTALLATION
